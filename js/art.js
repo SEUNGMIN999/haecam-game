@@ -36,12 +36,12 @@ var P = {
   ink: '#241a12',
   inkCool: '#122033',
   skin: '#f7c99b', skinSh: '#dc9a6b',
-  suit: '#f2e7c9', suitSh: '#cbb98f',
-  helm: '#a8845a', helmSh: '#7d6040', helmHi: '#c9a675',
+  suit: '#ffe1ec', suitSh: '#f4b6d0',
+  helm: '#bfe2f4', helmSh: '#93c4dd', helmHi: '#e8f6ff',
   lens: '#6fe6ff', lensHi: '#d8fbff', rim: '#3c4d5e',
   pack: '#9a7048', packSh: '#6f4f31',
-  boot: '#4f3d2a', scarf: '#ff8a5c',
-  orb: '#8ee63f', orbHi: '#e8ffc0', orbDk: '#3f8a15'
+  boot: '#4f3d2a', scarf: '#ffc0a6',
+  orb: '#aef07c', orbHi: '#f0ffd8', orbDk: '#6cbf3d'
 };
 
 /* ================= PLAYER ================= */
@@ -330,11 +330,11 @@ function buildEnemies() {
       x.bezierCurveTo(1.2, 9, 2.5, 6 + st_, 7, 1.5 + st_);
       x.closePath();
       var g = x.createLinearGradient(0, 2, 0, 14);
-      g.addColorStop(0, '#9c6ac2'); g.addColorStop(1, '#5a2f7d');
-      fs(x, g); st(x, '#2c1440', 1);
-      ell(x, 5.2, 10, .85, 1.05); fs(x, '#1a0c26');
-      ell(x, 9, 10, .85, 1.05); fs(x, '#1a0c26');
-      x.beginPath(); x.moveTo(5.8, 12.2); x.quadraticCurveTo(7, 11.4, 8.4, 12.2); st(x, '#1a0c26', .8);
+      g.addColorStop(0, '#d9bef2'); g.addColorStop(1, '#ac89d6');
+      fs(x, g); st(x, '#8a6ab0', 1);
+      ell(x, 5.2, 10, .85, 1.05); fs(x, '#6a4f96');
+      ell(x, 9, 10, .85, 1.05); fs(x, '#6a4f96');
+      x.beginPath(); x.moveTo(5.8, 12.2); x.quadraticCurveTo(7, 11.4, 8.4, 12.2); st(x, '#6a4f96', .8);
       ell(x, 4.4, 6.6, 1.1, 1.6); fs(x, 'rgba(255,255,255,.35)');
     });
   });
@@ -343,14 +343,14 @@ function buildEnemies() {
   E.redtide = [0, 1, 2].map(function (i) {
     return bake(16, 16, function (x) {
       var t = i / 3 * 6.28;
-      ell(x, 8, 8, 6.4, 6.4); fs(x, 'rgba(255,80,70,.22)');
+      ell(x, 8, 8, 6.4, 6.4); fs(x, 'rgba(255,160,150,.24)');
       for (var k = 0; k < 8; k++) {
         var a = k / 8 * 6.28 + t * .3;
         var r = 3.4 + Math.sin(t + k) * .5;
         ell(x, 8 + Math.cos(a) * r, 8 + Math.sin(a) * r, 1.7, 1.7);
-        fs(x, k % 2 ? '#ff5b45' : '#c9301f'); st(x, '#701208', .6);
+        fs(x, k % 2 ? '#ff9c8e' : '#f2a7bd'); st(x, '#c98598', .6);
       }
-      ell(x, 8, 8, 2.4, 2.4); fs(x, '#ff8a70'); st(x, '#701208', .7);
+      ell(x, 8, 8, 2.4, 2.4); fs(x, '#ffc7b8'); st(x, '#c98598', .7);
       ell(x, 7, 7.2, .8, .8); fs(x, 'rgba(255,255,255,.5)');
     });
   });
@@ -536,8 +536,8 @@ function buildProps() {
 var TILESETS = {
   fungi: { top: '#6fbf4a', topHi: '#a8e86f', body: '#7a5334', bodyDk: '#4e341f', edge: '#2b1a0e', tex: 'tex_fungi_ground' },
   fungi_dark: { top: '#8a6a44', topHi: '#b08a5c', body: '#4a3524', bodyDk: '#2e2015', edge: '#1a1009', tex: 'tex_rotten_bark' },
-  protist: { top: '#4fd6a8', topHi: '#9cf5d4', body: '#2b6e6a', bodyDk: '#17423f', edge: '#0a2422', tex: 'tex_protist_algae' },
-  protist_deep: { top: '#5aa8c9', topHi: '#a5e2f5', body: '#2a5470', bodyDk: '#15303f', edge: '#08181f', tex: 'tex_protist_waterbed' },
+  protist: { top: '#93e6cf', topHi: '#dcf7ee', body: '#a9ddd7', bodyDk: '#82c6c0', edge: '#5fa39d', tex: 'tex_protist_algae' },
+  protist_deep: { top: '#a9dcef', topHi: '#e3f4fb', body: '#aecbdd', bodyDk: '#88afc6', edge: '#6f9db2', tex: 'tex_protist_waterbed' },
   bacteria: { top: '#7fe8ff', topHi: '#d6faff', body: '#33507a', bodyDk: '#1c2e4a', edge: '#0a1424', tex: 'tex_bacteria_city_floor' },
   purify: { top: '#b8e6ff', topHi: '#eaf8ff', body: '#5e7a94', bodyDk: '#35485c', edge: '#131f2b', tex: 'tex_purification_facility' },
   core: { top: '#b98aff', topHi: '#e6d2ff', body: '#3b2a63', bodyDk: '#221741', edge: '#0d0820', tex: 'tex_hologram_grid' }

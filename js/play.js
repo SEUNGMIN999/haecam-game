@@ -1463,7 +1463,7 @@ World.prototype.draw = function (x) {
   /* --- sky --- */
   var SKY = {
     fungi:    ['#63c8f2', '#a8e6f7', '#3f7f6a'],
-    protist:  ['#1aa6c4', '#48d6d0', '#06303f'],
+    protist:  ['#cdeef5', '#a6e6df', '#79bfc6'],
     bacteria: ['#2b3f8f', '#5470d8', '#070d22'],
     core:     ['#5b3fa8', '#8f6bd8', '#120a2a']
   };
@@ -1563,7 +1563,7 @@ World.prototype.draw = function (x) {
   }
   /* --- water veil --- */
   if (this.water) {
-    x.save(); x.globalAlpha = 0.10; x.fillStyle = '#39c6ff'; x.fillRect(0, 0, VW, VH);
+    x.save(); x.globalAlpha = 0.10; x.fillStyle = '#cdeffb'; x.fillRect(0, 0, VW, VH);
     x.globalAlpha = 0.06; x.fillStyle = '#fff';
     for (var i = 0; i < 3; i++) {
       var yy = ((this.time * 12 + i * 70) % (VH + 40)) - 20;
